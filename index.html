@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="./icon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#172b4d" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>BMI Calculator</title>
+    <link href="index1.css" rel="stylesheet" />
+    <link href="index2.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
+    <div id="root">
+      <div class="container">
+        <div class="row center"><h1 class="white-text">BMI Tracker</h1></div>
+        <div class="row">
+          <div class="col m12 s12">
+            <div class="chartjs-size-monitor">
+              <div class="chartjs-size-monitor-expand">
+                <div class=""></div>
+              </div>
+              <div class="chartjs-size-monitor-shrink">
+                <div class=""></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m6 s12">
+                <label for="weight">Weight (in kg)</label
+                ><input
+                  id="weight"
+                  name="weight"
+                  type="number"
+                  min="1"
+                  max="999"
+                  placeholder="50"
+                  value=""
+                />
+              </div>
+              <div class="col m6 s12">
+                <label for="height">Height (in cm)</label
+                ><input
+                  id="height"
+                  name="height"
+                  type="number"
+                  min="1"
+                  max="999"
+                  placeholder="176"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="center">
+              <button
+                id="bmi-btn"
+                class="calculate-btn"
+                type="button"
+                disabled=""
+              >
+                Calculate BMI
+              </button>
+            </div>
+            <canvas
+              height="467"
+              width="935"
+              style="display: block; height: 374px; width: 748px"
+              class="chartjs-render-monitor"
+            ></canvas>
+            <div>
+              <div class="row center">
+                <h4 class="white-text">7 Day Data</h4>
+              </div>
+              <div class="data-container row">
+                <div class="center white-text">No log found</div>
+              </div>
+            </div>
+            <div class="center">
+              <button class="calculate-btn">Undo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      !(function (i) {
+        function e(e) {
+          for (
+            var r, t, n = e[0], o = e[1], u = e[2], l = 0, a = [];
+            l < n.length;
+            l++
+          )
+            (t = n[l]),
+              Object.prototype.hasOwnProperty.call(f, t) &&
+                f[t] &&
+                a.push(f[t][0]),
+              (f[t] = 0);
+          for (r in o)
+            Object.prototype.hasOwnProperty.call(o, r) && (i[r] = o[r]);
+          for (s && s(e); a.length; ) a.shift()();
+          return p.push.apply(p, u || []), c();
+        }
+        function c() {
+          for (var e, r = 0; r < p.length; r++) {
+            for (var t = p[r], n = !0, o = 1; o < t.length; o++) {
+              var u = t[o];
+              0 !== f[u] && (n = !1);
+            }
+            n && (p.splice(r--, 1), (e = l((l.s = t[0]))));
+          }
+          return e;
+        }
+        var t = {},
+          f = { 1: 0 },
+          p = [];
+        function l(e) {
+          if (t[e]) return t[e].exports;
+          var r = (t[e] = { i: e, l: !1, exports: {} });
+          return i[e].call(r.exports, r, r.exports, l), (r.l = !0), r.exports;
+        }
+        (l.m = i),
+          (l.c = t),
+          (l.d = function (e, r, t) {
+            l.o(e, r) ||
+              Object.defineProperty(e, r, { enumerable: !0, get: t });
+          }),
+          (l.r = function (e) {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (l.t = function (r, e) {
+            if ((1 & e && (r = l(r)), 8 & e)) return r;
+            if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+            var t = Object.create(null);
+            if (
+              (l.r(t),
+              Object.defineProperty(t, "default", { enumerable: !0, value: r }),
+              2 & e && "string" != typeof r)
+            )
+              for (var n in r)
+                l.d(
+                  t,
+                  n,
+                  function (e) {
+                    return r[e];
+                  }.bind(null, n)
+                );
+            return t;
+          }),
+          (l.n = function (e) {
+            var r =
+              e && e.__esModule
+                ? function () {
+                    return e.default;
+                  }
+                : function () {
+                    return e;
+                  };
+            return l.d(r, "a", r), r;
+          }),
+          (l.o = function (e, r) {
+            return Object.prototype.hasOwnProperty.call(e, r);
+          }),
+          (l.p = "/bmi-calculator/");
+        var r = (window.webpackJsonpbmical = window.webpackJsonpbmical || []),
+          n = r.push.bind(r);
+        (r.push = e), (r = r.slice());
+        for (var o = 0; o < r.length; o++) e(r[o]);
+        var s = n;
+        c();
+      })([]);
+    </script>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+  </body>
+</html>
